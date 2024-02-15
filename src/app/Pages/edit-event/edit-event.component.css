@@ -1,0 +1,39 @@
+.container {
+    font-family: cursive;
+    margin: 20px auto;
+    text-align: center;
+}
+
+.table {
+    width: 500px;
+    margin: 20px auto;
+}
+
+.table input {
+    font-family: cursive;
+    border: none;
+    outline: none;
+    background-color: #f2f2f2;
+    padding: 15px;
+    margin-bottom: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: 100%;
+}
+
+.btn-primary {
+    background-color: black;
+    color: yellow;
+    border: 2px solid black;
+    padding: 15px 30px;
+    margin-top: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out, border 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: black; 
+    border: 2px solid black;
+    color: yellow;
+}
+

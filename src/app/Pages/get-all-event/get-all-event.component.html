@@ -1,0 +1,21 @@
+<div class="container">
+    <h2>Event Management</h2>
+  
+    <div *ngIf="Events.length === 0">
+      <p>No events available.</p>
+    </div>
+  
+    <div *ngFor="let event of Events">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ event.title }}</h5>
+          <p class="card-text">Description: {{ event.description }}</p>
+          <p class="card-text">Date: {{ event.date | date }}</p>
+          <p class="card-text">Location: {{ event.location }}</p>
+          <p class="card-text">Max Attendees: {{ event.maxAttendees }}</p>
+          <p class="card-text">Registration Fee: {{ event.registrationFee }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

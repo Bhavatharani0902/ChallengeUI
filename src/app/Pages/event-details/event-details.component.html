@@ -1,0 +1,28 @@
+<div class="container">
+    <h2>Event Details</h2>
+  
+    <div class="form-group">
+      <label for="searchTerm">Search Event by Title:</label>
+      <input type="text" id="searchTerm" class="form-control" [(ngModel)]="searchTerm">
+      <button class="btn btn-primary mt-2" (click)="searchEvent()">Search</button>
+    </div>
+  
+    <div *ngIf="isEventExist">
+      <div class="card">
+        <div class="card-body">
+          <h5 class="card-title">{{ event.title }}</h5>
+          <p class="card-text"><strong>Description:</strong> {{ event.description }}</p>
+          <p class="card-text"><strong>Date:</strong> {{ event.date | date:'short' }}</p>
+          <p class="card-text"><strong>Location:</strong> {{ event.location }}</p>
+          <p class="card-text"><strong>Max Attendees:</strong> {{ event.maxAttendees }}</p>
+          <p class="card-text"><strong>Registration Fee:</strong> {{ event.registrationFee }}</p>
+
+        </div>
+      </div>
+    </div>
+  
+    <div *ngIf="errMsg">
+      <p class="text-danger">{{ errMsg }}</p>
+    </div>
+  </div>
+  

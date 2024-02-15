@@ -1,0 +1,35 @@
+
+<div class="container">
+    <div class="add-event-form" style="width: 50%;">
+      <form name="form" #f="ngForm" (ngSubmit)="f.form.valid && addEvent()">
+        <div class="form-group">
+          <label>Title</label>
+          <input type="text" class="form-control" name="title" [(ngModel)]="newEvent.title" required />
+        </div>
+        <div class="form-group">
+          <label>Description</label>
+          <input type="text" class="form-control" name="author" [(ngModel)]="newEvent.description" required />
+        </div>
+        <div class="form-group">
+          <label>Date</label>
+          <input type="date" class="form-control" name="genre" [(ngModel)]="newEvent.date" required />
+        </div>
+        <div class="form-group">
+          <label>Location</label>
+          <input type="text" class="form-control" name="isbn" [(ngModel)]="newEvent.location" required />
+        </div>
+        <div class="form-group">
+          <label>Maximum Attended</label>
+          <input type="text" class="form-control" name="publishDate" [(ngModel)]="newEvent.maxAttendees" required />
+        </div>
+        <div class="form-group">
+            <label>Registration Fees</label>
+            <input type="text" class="form-control" name="publishDate" [(ngModel)]="newEvent.registrationFee" required />
+          </div>
+        <div class="form-group">
+          <button type="submit" class="btn btn-primary">Add Event</button>
+        </div>
+      </form>
+    </div>
+  </div>
+  

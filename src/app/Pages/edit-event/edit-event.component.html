@@ -1,0 +1,73 @@
+<div class="container">
+    <table class="table" style="width: 500px;">
+      <tr>
+        <td>
+          <label>Event ID</label>
+        </td>
+        <td>
+          <input type="number" [(ngModel)]="eventId" class="form-control">
+        </td>
+        <td>
+          <button class="btn btn-primary" (click)="search()">Search</button>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <span style="color: red;">{{errMsg}}</span>
+        </td>
+      </tr>
+    </table>
+    <hr>
+    <table class="table" *ngIf="isEventExist">
+      <tr>
+        <td>Event ID</td>
+        <td>
+          <input type="number" [(ngModel)]="event.eventId" readonly class="form-control">
+        </td>
+      </tr>
+      <tr>
+        <td>Title</td>
+        <td>
+          <input type="text" [(ngModel)]="event.title" class="form-control">
+        </td>
+      </tr>
+      <!-- Include other properties as needed -->
+      <tr>
+        <td>Description</td>
+        <td>
+          <input type="text" [(ngModel)]="event.description" class="form-control">
+        </td>
+      </tr>
+      <tr>
+        <td>Date</td>
+        <td>
+          <input type="text" [(ngModel)]="event.date" class="form-control">
+        </td>
+      </tr>
+      <tr>
+        <td>Location</td>
+        <td>
+          <input type="text" [(ngModel)]="event.location" class="form-control">
+        </td>
+      </tr>
+      <tr>
+        <td>Max Attendees</td>
+        <td>
+          <input type="number" [(ngModel)]="event.maxAttendees" class="form-control">
+        </td>
+      </tr>
+      <tr>
+        <td>Registration Fee</td>
+        <td>
+          <input type="number" [(ngModel)]="event.registrationFee" class="form-control">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="2">
+          <button class="btn btn-primary" (click)="updateEvent()">Update</button>
+          <button class="btn btn-primary" (click)="delete()">Delete</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+  
